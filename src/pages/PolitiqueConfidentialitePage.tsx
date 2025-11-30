@@ -306,6 +306,10 @@ const PolitiqueConfidentialitePage: React.FC = () => {
                   du site et des cookies d'analyse anonymisés. Nous n'utilisons pas de cookies publicitaires 
                   sans votre consentement explicite.
                 </p>
+                <p>
+                  Vous pouvez gérer vos préférences de cookies à tout moment en visitant notre page de{' '}
+                  <a href="/preferences-cookies" className="text-primary-900 hover:underline">préférences de cookies</a>.
+                </p>
               </div>
             </div>
 

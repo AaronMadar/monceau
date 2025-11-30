@@ -12,6 +12,8 @@ import ContactPage from './pages/ContactPage';
 import MentionsLegalesPage from './pages/MentionsLegalesPage';
 import PolitiqueConfidentialitePage from './pages/PolitiqueConfidentialitePage';
 import ConditionsGeneralesPage from './pages/ConditionsGeneralesPage';
+import CookieBanner from './components/CookieBanner';
+import CookiePreferences from './components/CookiePreferences';
 import AssuranceProfessionnellePage from './pages/assurance/AssuranceProfessionnellePage';
 import AssurancePriveePage from './pages/assurance/AssurancePriveePage';
 import ProduitAssurancielPage from './pages/gestion-actifs/ProduitAssurancielPage';
@@ -40,6 +42,7 @@ function App() {
               <Route path="/mentions-legales" element={<MentionsLegalesPage />} />
               <Route path="/politique-confidentialite" element={<PolitiqueConfidentialitePage />} />
               <Route path="/conditions-generales" element={<ConditionsGeneralesPage />} />
+              <Route path="/preferences-cookies" element={<CookiePreferences />} />
               
               {/* Sous-pages Assurance */}
               <Route path="/assurance/professionnelle" element={<AssuranceProfessionnellePage />} />
@@ -59,6 +62,7 @@ function App() {
             </Routes>
           </main>
           <Footer />
+          <CookieBanner />
         </div>
       </Router>
     </HelmetProvider>
