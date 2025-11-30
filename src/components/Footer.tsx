@@ -126,13 +126,31 @@ const Footer: React.FC = () => {
             </p>
             
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <button className="text-gray-400 hover:text-white font-sans text-sm transition-colors duration-200">
+              <button 
+                onClick={() => {
+                  navigate('/mentions-legales');
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="text-gray-400 hover:text-white font-sans text-sm transition-colors duration-200"
+              >
                 Mentions légales
               </button>
-              <button className="text-gray-400 hover:text-white font-sans text-sm transition-colors duration-200">
+              <button 
+                onClick={() => {
+                  navigate('/politique-confidentialite');
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="text-gray-400 hover:text-white font-sans text-sm transition-colors duration-200"
+              >
                 Politique de confidentialité
               </button>
-              <button className="text-gray-400 hover:text-white font-sans text-sm transition-colors duration-200">
+              <button 
+                onClick={() => {
+                  navigate('/conditions-generales');
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="text-gray-400 hover:text-white font-sans text-sm transition-colors duration-200"
+              >
                 Conditions générales
               </button>
             </div>

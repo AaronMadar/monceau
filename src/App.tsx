@@ -9,6 +9,9 @@ import GestionActifsPage from './pages/GestionActifsPage';
 import DeveloppementDurablePage from './pages/DeveloppementDurablePage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import MentionsLegalesPage from './pages/MentionsLegalesPage';
+import PolitiqueConfidentialitePage from './pages/PolitiqueConfidentialitePage';
+import ConditionsGeneralesPage from './pages/ConditionsGeneralesPage';
 import AssuranceProfessionnellePage from './pages/assurance/AssuranceProfessionnellePage';
 import AssurancePriveePage from './pages/assurance/AssurancePriveePage';
 import ProduitAssurancielPage from './pages/gestion-actifs/ProduitAssurancielPage';
@@ -34,6 +37,9 @@ function App() {
               <Route path="/developpement-durable" element={<DeveloppementDurablePage />} />
               <Route path="/a-propos" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
+              <Route path="/mentions-legales" element={<MentionsLegalesPage />} />
+              <Route path="/politique-confidentialite" element={<PolitiqueConfidentialitePage />} />
+              <Route path="/conditions-generales" element={<ConditionsGeneralesPage />} />
               
               {/* Sous-pages Assurance */}
               <Route path="/assurance/professionnelle" element={<AssuranceProfessionnellePage />} />
