@@ -100,7 +100,7 @@ const Footer: React.FC = () => {
                 <MapPin className="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-gray-300 font-sans text-sm">75008 Paris</p>
-                  <p className="text-gray-400 font-sans text-xs">Proche Parc Monceau</p>
+                  <p className="text-gray-400 font-sans text-xs">47 Bd de Courcelles</p>
                 </div>
               </div>
               

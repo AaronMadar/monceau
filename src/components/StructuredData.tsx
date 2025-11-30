@@ -13,7 +13,7 @@ const StructuredData: React.FC = () => {
     "foundingDate": "2020",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Proche Parc Monceau",
+      "streetAddress": "47 Bd de Courcelles",
       "addressLocality": "Paris",
       "postalCode": "75008",
       "addressCountry": "FR"

@@ -44,7 +44,7 @@ const Contact: React.FC = () => {
     {
       icon: MapPin,
       title: 'Adresse',
-      details: ['75008 Paris', 'Proche Parc Monceau'],
+      details: ['75008 Paris', '47 Bd de Courcelles'],
       subtext: 'Sur rendez-vous uniquement'
     },
     {
