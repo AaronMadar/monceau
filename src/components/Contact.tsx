@@ -256,14 +256,6 @@ const Contact: React.FC = () => {
               ))}
             </div>
 
-            <div className="bg-primary-900 text-white rounded-lg p-6">
-              <h4 className="text-lg font-serif font-semibold mb-3">
-                Référence Client : MDC 491
-              </h4>
-              <p className="font-sans text-sm opacity-90">
-                Merci de mentionner cette référence lors de votre premier contact.
-              </p>
-            </div>
           </div>
         </div>
       </div>

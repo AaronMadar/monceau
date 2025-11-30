@@ -1,8 +1,26 @@
 import React from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer: React.FC = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const currentYear = new Date().getFullYear();
+
+  const handleNavigation = (sectionId: string, route: string) => {
+    // Si on est sur la page d'accueil, essayer d'abord de scroller vers la section
+    if (location.pathname === '/') {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        return;
+      }
+    }
+    // Sinon, naviguer vers la page dédiée
+    navigate(route);
+    // Scroller en haut de la page après navigation
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <footer className="bg-primary-950 text-white">
@@ -41,32 +59,32 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               <li>
                 <button 
-                  onClick={() => document.querySelector('#assurance')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="text-gray-300 hover:text-white font-sans text-sm transition-colors duration-200"
+                  onClick={() => handleNavigation('assurance', '/assurance')}
+                  className="text-gray-300 hover:text-white font-sans text-sm transition-colors duration-200 text-left w-full"
                 >
                   Assurance & Prévoyance
                 </button>
               </li>
               <li>
                 <button 
-                  onClick={() => document.querySelector('#gestion-actifs')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="text-gray-300 hover:text-white font-sans text-sm transition-colors duration-200"
+                  onClick={() => handleNavigation('gestion-actifs', '/gestion-actifs')}
+                  className="text-gray-300 hover:text-white font-sans text-sm transition-colors duration-200 text-left w-full"
                 >
                   Gestion d'Actifs
                 </button>
               </li>
               <li>
                 <button 
-                  onClick={() => document.querySelector('#developpement-durable')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="text-gray-300 hover:text-white font-sans text-sm transition-colors duration-200"
+                  onClick={() => handleNavigation('developpement-durable', '/developpement-durable')}
+                  className="text-gray-300 hover:text-white font-sans text-sm transition-colors duration-200 text-left w-full"
                 >
                   Développement Durable
                 </button>
               </li>
               <li>
                 <button 
-                  onClick={() => document.querySelector('#a-propos')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="text-gray-300 hover:text-white font-sans text-sm transition-colors duration-200"
+                  onClick={() => handleNavigation('a-propos', '/a-propos')}
+                  className="text-gray-300 hover:text-white font-sans text-sm transition-colors duration-200 text-left w-full"
                 >
                   À Propos
                 </button>
@@ -97,11 +115,6 @@ const Footer: React.FC = () => {
               </div>
             </div>
 
-            <div className="mt-6 p-3 bg-white bg-opacity-5 rounded border border-white border-opacity-20">
-              <p className="text-xs text-gray-400 font-sans">
-                <strong className="text-gray-300">Référence :</strong> MDC 491
-              </p>
-            </div>
           </div>
         </div>
 

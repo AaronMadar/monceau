@@ -58,9 +58,6 @@ class ErrorBoundary extends Component<Props, State> {
             </div>
             
             <div className="mt-8 p-4 bg-gray-50 rounded border text-left">
-              <p className="text-xs text-anthracite-500 font-sans mb-2">
-                <strong>Référence :</strong> MDC 491
-              </p>
               <p className="text-xs text-anthracite-500 font-sans">
                 Pour toute assistance : contact@monceaudavid.fr
               </p>
