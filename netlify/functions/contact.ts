@@ -1,10 +1,23 @@
-import { Router } from 'express';
-import { transporter } from '../utils/mailer';
+import { Handler } from '@netlify/functions';
+import nodemailer from 'nodemailer';
 
-const router = Router();
+const transporter = nodemailer.createTransport({
+  host: process.env.SMTP_HOST,
+  port: Number(process.env.SMTP_PORT),
+  secure: false,
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
+  },
+});
 
-router.post('/send', async (req, res) => {
-  const { civilite, nom, prenom, email, telephone, entreprise, domaine, message } = req.body;
+export const handler: Handler = async (event, context) => {
+  if (event.httpMethod !== 'POST') {
+    return { statusCode: 405, body: 'Method Not Allowed' };
+  }
+
+  const data = JSON.parse(event.body || '{}');
+  const { civilite, nom, prenom, email, telephone, entreprise, domaine, message } = data;
 
   const mailOptions = {
     from: `"${civilite} ${prenom} ${nom}" <${email}>`,
@@ -30,11 +43,9 @@ router.post('/send', async (req, res) => {
 
   try {
     await transporter.sendMail(mailOptions);
-    res.status(200).json({ message: 'Email envoyé avec succès' });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'Erreur lors de l’envoi de l’email' });
+    return { statusCode: 200, body: JSON.stringify({ message: 'Email envoyé avec succès' }) };
+  } catch (err) {
+    console.error(err);
+    return { statusCode: 500, body: JSON.stringify({ message: 'Erreur lors de l’envoi de l’email' }) };
   }
-});
-
-export default router;
+};

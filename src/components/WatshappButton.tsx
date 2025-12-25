@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import  { FC } from "react";
 
 const WhatsAppButton: FC = () => {
   const phoneNumber: string = "33651086871";
@@ -26,7 +26,7 @@ const WhatsAppButton: FC = () => {
         <span className="whatsapp-tooltip">💬 Besoin d’aide ?</span>
       </a>
 
-      <style jsx>{`
+      <style>{`
         .whatsapp-button {
           position: fixed;
           bottom: 24px;

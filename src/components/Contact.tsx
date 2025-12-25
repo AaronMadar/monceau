@@ -20,11 +20,12 @@ const Contact: React.FC = () => {
       [name]: value
     }));
   };
-
+  
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+  
     try {
-      const res = await fetch('https://monceaudavidconseil.com/api/contact/send', {
+      const res = await fetch('/.netlify/functions/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -50,6 +51,7 @@ const Contact: React.FC = () => {
       alert('Une erreur est survenue. Veuillez réessayer plus tard.');
     }
   };
+  
   
 
   const contactInfo = [
