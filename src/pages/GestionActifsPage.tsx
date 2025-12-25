@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { PieChart, TrendingUp, Building, Coins, ArrowRight } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
+import WhatsAppButton from '../components/WatshappButton';
 
 const GestionActifsPage: React.FC = () => {
   const services = [
@@ -152,6 +153,7 @@ const GestionActifsPage: React.FC = () => {
             <ArrowRight className="w-4 h-4 ml-2" />
           </Link>
         </div>
+        <WhatsAppButton />
       </section>
     </>
   );

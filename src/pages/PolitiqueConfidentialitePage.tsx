@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import SEOHead from '../components/SEOHead';
+import WhatsAppButton from '../components/WatshappButton';
 
 const PolitiqueConfidentialitePage: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -350,6 +351,7 @@ const PolitiqueConfidentialitePage: React.FC = () => {
             </div>
           </div>
         </div>
+        <WhatsAppButton />
       </section>
     </>
   );

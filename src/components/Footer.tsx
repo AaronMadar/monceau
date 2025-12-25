@@ -37,12 +37,12 @@ const Footer: React.FC = () => {
                 <p className="text-sm text-gray-300">Cabinet de conseil</p>
               </div>
             </div>
-            
+
             <p className="text-gray-300 font-sans leading-relaxed mb-6 max-w-md">
-              Cabinet de conseil indépendant spécialisé en assurance, gestion d'actifs et développement durable. 
+              Cabinet de conseil indépendant spécialisé en assurance, gestion d'actifs et développement durable.
               Une expertise traditionnelle au service de votre réussite.
             </p>
-            
+
             <div className="bg-white bg-opacity-10 rounded-lg p-4 mb-6">
               <blockquote className="text-sm font-serif italic text-center text-gray-200">
                 "Je te montrerai la voie que tu dois suivre."
@@ -58,7 +58,7 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-serif font-semibold mb-6">Nos Services</h4>
             <ul className="space-y-3">
               <li>
-                <button 
+                <button
                   onClick={() => handleNavigation('assurance', '/assurance')}
                   className="text-gray-300 hover:text-white font-sans text-sm transition-colors duration-200 text-left w-full"
                 >
@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
                 </button>
               </li>
               <li>
-                <button 
+                <button
                   onClick={() => handleNavigation('gestion-actifs', '/gestion-actifs')}
                   className="text-gray-300 hover:text-white font-sans text-sm transition-colors duration-200 text-left w-full"
                 >
@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
                 </button>
               </li>
               <li>
-                <button 
+                <button
                   onClick={() => handleNavigation('developpement-durable', '/developpement-durable')}
                   className="text-gray-300 hover:text-white font-sans text-sm transition-colors duration-200 text-left w-full"
                 >
@@ -82,7 +82,7 @@ const Footer: React.FC = () => {
                 </button>
               </li>
               <li>
-                <button 
+                <button
                   onClick={() => handleNavigation('a-propos', '/a-propos')}
                   className="text-gray-300 hover:text-white font-sans text-sm transition-colors duration-200 text-left w-full"
                 >
@@ -100,18 +100,29 @@ const Footer: React.FC = () => {
                 <MapPin className="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-gray-300 font-sans text-sm">75008 Paris</p>
-                  <p className="text-gray-400 font-sans text-xs">47 Bd de Courcelles</p>
+                  <p className="text-gray-400 font-sans text-xs">47 Boulevard de Courcelles</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-gray-400 flex-shrink-0" />
-                <p className="text-gray-300 font-sans text-sm">+33 (0)1 XX XX XX XX</p>
+
+                <a
+                  href="tel:+33651086871"
+                  className="text-gray-300 font-sans text-sm hover:text-white"
+                >
+                  +33 6 51 08 68 71
+                </a>
               </div>
-              
+
+
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-gray-400 flex-shrink-0" />
-                <p className="text-gray-300 font-sans text-sm">contact@monceaudavid.fr</p>
+                <a
+                  href="mailto:contact@monceaudavidconseil.com"
+                  className="text-gray-300 font-sans text-sm hover:text-white"
+                > contact@monceaudavidconseil.com</a>
+
               </div>
             </div>
 
@@ -124,9 +135,9 @@ const Footer: React.FC = () => {
             <p className="text-gray-400 font-sans text-sm">
               © {currentYear} Monceau David & Co. Tous droits réservés.
             </p>
-            
+
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <button 
+              <button
                 onClick={() => {
                   navigate('/mentions-legales');
                   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -135,7 +146,7 @@ const Footer: React.FC = () => {
               >
                 Mentions légales
               </button>
-              <button 
+              <button
                 onClick={() => {
                   navigate('/politique-confidentialite');
                   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -144,7 +155,7 @@ const Footer: React.FC = () => {
               >
                 Politique de confidentialité
               </button>
-              <button 
+              <button
                 onClick={() => {
                   navigate('/conditions-generales');
                   window.scrollTo({ top: 0, behavior: 'smooth' });

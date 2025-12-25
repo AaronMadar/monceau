@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Leaf, Zap, Target, ArrowLeft } from 'lucide-react';
 import SEOHead from '../../components/SEOHead';
+import WhatsAppButton from '../../components/WatshappButton';
 
 const StrategieEnergetiquePage: React.FC = () => {
   const services = [
@@ -145,6 +146,7 @@ const StrategieEnergetiquePage: React.FC = () => {
             Planifier votre transition énergétique
           </Link>
         </div>
+        <WhatsAppButton />    
       </section>
     </>
   );

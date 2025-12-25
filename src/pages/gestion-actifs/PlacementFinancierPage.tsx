@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { TrendingUp, BarChart, Target, ArrowLeft } from 'lucide-react';
 import SEOHead from '../../components/SEOHead';
+import WhatsAppButton from '../../components/WatshappButton';
 
 const PlacementFinancierPage: React.FC = () => {
   const services = [
@@ -154,6 +155,7 @@ const PlacementFinancierPage: React.FC = () => {
             Demander une analyse de portefeuille
           </Link>
         </div>
+        <WhatsAppButton />
       </section>
     </>
   );

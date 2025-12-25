@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Users, BarChart, Target, ArrowLeft } from 'lucide-react';
 import SEOHead from '../../components/SEOHead';
+import WhatsAppButton from '../../components/WatshappButton';
 
 const AccompagnementPage: React.FC = () => {
   const services = [
@@ -145,6 +146,7 @@ const AccompagnementPage: React.FC = () => {
             Demander un accompagnement personnalisé
           </Link>
         </div>
+        <WhatsAppButton />
       </section>
     </>
   );

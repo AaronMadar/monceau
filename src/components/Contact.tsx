@@ -21,12 +21,36 @@ const Contact: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Ici, intégrer la logique d'envoi du formulaire
-    alert('Merci pour votre message. Nous vous contacterons dans les plus brefs délais.');
+    try {
+      const res = await fetch('https://monceaudavidconseil.com/api/contact/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+  
+      if (res.ok) {
+        alert('Merci pour votre message. Nous vous contacterons dans les plus brefs délais.');
+        setFormData({
+          civilite: '',
+          nom: '',
+          prenom: '',
+          email: '',
+          telephone: '',
+          entreprise: '',
+          domaine: '',
+          message: ''
+        });
+      } else {
+        alert('Une erreur est survenue. Veuillez réessayer plus tard.');
+      }
+    } catch (error) {
+      console.error(error);
+      alert('Une erreur est survenue. Veuillez réessayer plus tard.');
+    }
   };
+  
 
   const contactInfo = [
     {

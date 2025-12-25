@@ -1,6 +1,7 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 import Contact from '../components/Contact';
+import WhatsAppButton from '../components/WatshappButton';
 
 const ContactPage: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ const ContactPage: React.FC = () => {
       />
       
       <Contact />
+      <WhatsAppButton />
     </>
   );
 };

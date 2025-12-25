@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Building, Shield, Users, ArrowLeft } from 'lucide-react';
 import SEOHead from '../../components/SEOHead';
+import WhatsAppButton from '../../components/WatshappButton';
 
 const AssuranceProfessionnellePage: React.FC = () => {
   const services = [
@@ -154,6 +155,7 @@ const AssuranceProfessionnellePage: React.FC = () => {
             Demander un diagnostic d'assurance
           </Link>
         </div>
+        <WhatsAppButton />
       </section>
     </>
   );

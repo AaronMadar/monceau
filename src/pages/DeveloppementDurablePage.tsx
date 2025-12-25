@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Leaf, Zap, BarChart, Settings, ArrowRight } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
+import WhatsAppButton from '../components/WatshappButton';
 
 const DeveloppementDurablePage: React.FC = () => {
   const services = [
@@ -182,6 +183,7 @@ const DeveloppementDurablePage: React.FC = () => {
           </Link>
         </div>
       </section>
+      <WhatsAppButton />
     </>
   );
 };

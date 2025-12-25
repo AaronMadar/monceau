@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Calculator, TrendingDown, FileText, ArrowLeft } from 'lucide-react';
 import SEOHead from '../../components/SEOHead';
+import WhatsAppButton from '../../components/WatshappButton';
 
 const OptimisationCoutsPage: React.FC = () => {
   const services = [
@@ -145,6 +146,7 @@ const OptimisationCoutsPage: React.FC = () => {
             Demander une analyse d'optimisation
           </Link>
         </div>
+        <WhatsAppButton />
       </section>
     </>
   );

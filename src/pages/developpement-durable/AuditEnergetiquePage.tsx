@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { BarChart, Search, Calculator, ArrowLeft } from 'lucide-react';
 import SEOHead from '../../components/SEOHead';
+import WhatsAppButton from '../../components/WatshappButton';
 
 const AuditEnergetiquePage: React.FC = () => {
   const services = [
@@ -145,6 +146,7 @@ const AuditEnergetiquePage: React.FC = () => {
             Planifier un audit énergétique
           </Link>
         </div>
+        <WhatsAppButton />
       </section>
     </>
   );

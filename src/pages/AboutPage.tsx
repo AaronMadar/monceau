@@ -1,6 +1,7 @@
 import React from 'react';
 import { Award, Users, Clock, Target } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
+import WhatsAppButton from '../components/WatshappButton';
 
 const AboutPage: React.FC = () => {
   const values = [
@@ -128,6 +129,7 @@ const AboutPage: React.FC = () => {
             — La philosophie Monceau David & Co
           </cite>
         </div>
+        <WhatsAppButton />
       </section>
     </>
   );
