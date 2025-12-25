@@ -21,17 +21,19 @@ const Contact: React.FC = () => {
     }));
   };
   
-  const handleSubmit = async (e: React.FormEvent) => {
+  // Soumission compatible Netlify Forms (sans rechargement de page)
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-  
-    try {
-      const res = await fetch('/.netlify/functions/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
-  
-      if (res.ok) {
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(data as any).toString(),
+    })
+      .then(() => {
         alert('Merci pour votre message. Nous vous contacterons dans les plus brefs délais.');
         setFormData({
           civilite: '',
@@ -43,48 +45,43 @@ const Contact: React.FC = () => {
           domaine: '',
           message: ''
         });
-      } else {
+      })
+      .catch(() => {
         alert('Une erreur est survenue. Veuillez réessayer plus tard.');
-      }
-    } catch (error) {
-      console.error(error);
-      alert('Une erreur est survenue. Veuillez réessayer plus tard.');
-    }
+      });
   };
-  
-  
 
+  // Le reste du composant (UI) reste IDENTIQUE
   const contactInfo = [
     {
       icon: Phone,
       title: 'Téléphone',
-      details: ['+33 (0)1 XX XX XX XX'],
+      details: ['+33 6 51 08 68 71'],
       subtext: 'Lundi - Vendredi : 9h00 - 18h00'
     },
     {
       icon: Mail,
       title: 'Email',
-      details: ['contact@monceaudavid.fr'],
+      details: ['contact@monceaudavidconseil.com'],
       subtext: 'Réponse sous 24h ouvrées'
     },
     {
       icon: MapPin,
       title: 'Adresse',
-      details: ['75008 Paris', '47 Bd de Courcelles'],
+      details: ['75008 Paris', '47 Boulevard de Courcelles'],
       subtext: 'Sur rendez-vous uniquement'
     },
     {
       icon: Clock,
       title: 'Horaires',
-      details: ['Lun - Ven : 9h00 - 18h00', 'Sam : 9h00 - 13h00'],
-      subtext: 'Fermé le dimanche'
+      details: ['Lun - Ven : 9h00 - 18h00'],
+      subtext: 'Fermé le samedi-dimanche'
     }
   ];
 
   return (
     <section id="contact" className="py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-serif font-semibold text-primary-900 mb-6">
             Contactez-Nous
@@ -102,7 +99,22 @@ const Contact: React.FC = () => {
               Demande de Contact
             </h3>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
+            {/* LES AJOUTS IMPORTANTS POUR NETLIFY */}
+            <form 
+              name="contact" 
+              method="POST" 
+              data-netlify="true" 
+              data-netlify-honeypot="bot-field"
+              onSubmit={handleSubmit}
+              className="space-y-6"
+            >
+              {/* Champs cachés obligatoires pour Netlify */}
+              <input type="hidden" name="form-name" value="contact" />
+              <div hidden>
+                <input name="bot-field" />
+              </div>
+
+              {/* Ton formulaire existant (inchangé) */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div>
                   <label htmlFor="civilite" className="block text-sm font-medium text-anthracite-700 mb-2">
@@ -247,7 +259,7 @@ const Contact: React.FC = () => {
             </form>
           </div>
 
-          {/* Contact Information */}
+          {/* Le reste (infos contact) reste identique */}
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-serif font-semibold text-primary-900 mb-6">
@@ -281,7 +293,6 @@ const Contact: React.FC = () => {
                 </div>
               ))}
             </div>
-
           </div>
         </div>
       </div>

@@ -1,6 +1,4 @@
 [build]
-  publish = "dist"                # <- dossier Vite buildé
-  functions = "netlify/functions"
+  publish = "dist"      # Dossier de build Vite/React
+  command = "npm run build"  # À ajouter si ce n’est pas déjà détecté automatiquement
 
-[dev]
-  functions = "netlify/functions"
