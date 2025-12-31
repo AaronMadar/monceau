@@ -58,10 +58,10 @@ const MentionsLegalesPage: React.FC = () => {
               </h2>
               <div className="text-anthracite-600 font-sans leading-relaxed space-y-2">
                 <p><strong>Raison sociale :</strong> Monceau David & Co</p>
-                <p><strong>Forme juridique :</strong> Cabinet de conseil</p>
+                <p><strong>Forme juridique :</strong> SASU, société par actions simplifiée unipersonnelle</p>
                 <p><strong>Adresse :</strong> 47 Bd de Courcelles, 75008 Paris, France</p>
-                <p><strong>Email :</strong> contact@monceaudavid.fr</p>
-                <p><strong>Téléphone :</strong> +33 (0)1 XX XX XX XX</p>
+                <p><strong>Email :</strong> contact@monceaudavidconseil.com</p>
+                <p><strong>ORIAS :</strong> 25004557</p>
               </div>
             </div>
 
@@ -206,8 +206,8 @@ const MentionsLegalesPage: React.FC = () => {
                 9. Contact
               </h2>
               <p className="text-anthracite-600 font-sans leading-relaxed">
-                Pour toute question concernant les présentes mentions légales, vous pouvez nous 
-                contacter à l'adresse suivante : <a href="mailto:contact@monceaudavid.fr" className="text-primary-900 hover:underline">contact@monceaudavid.fr</a>
+                Pour toute question concernant les présentes mentions légales, vous pouvez nous
+                contacter à l'adresse suivante : <a href="mailto:contact@monceaudavidconseil.com" className="text-primary-900 hover:underline">contact@monceaudavidconseil.com</a>
               </p>
             </div>
 

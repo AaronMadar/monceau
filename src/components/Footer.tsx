@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, MapPin, Award } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const navigate = useNavigate();
@@ -105,16 +105,9 @@ const Footer: React.FC = () => {
               </div>
 
               <div className="flex items-center space-x-3">
-                <Phone className="w-4 h-4 text-gray-400 flex-shrink-0" />
-
-                <a
-                  href="tel:+33651086871"
-                  className="text-gray-300 font-sans text-sm hover:text-white"
-                >
-                  +33 6 51 08 68 71
-                </a>
+                <Award className="w-4 h-4 text-gray-400 flex-shrink-0" />
+                <span className="text-gray-300 font-sans text-sm">ORIAS: 25004557</span>
               </div>
-
 
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-gray-400 flex-shrink-0" />

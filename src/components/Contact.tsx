@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Phone, MapPin, Clock, X } from 'lucide-react';
+import { Mail, MapPin, Clock, X } from 'lucide-react';
 import emailjs from '@emailjs/browser'; // 1. Import de la bibliothèque
 
 const Contact: React.FC = () => {
@@ -69,7 +69,6 @@ const Contact: React.FC = () => {
   };
 
   const contactInfo = [
-    { icon: Phone, title: 'Téléphone', details: ['+33 6 51 08 68 71'], subtext: 'Du lundi au vendredi' },
     { icon: Mail, title: 'Email', details: ['contact@monceaudavidconseil.com'], subtext: 'Réponse sous 24h ouvrées' },
     { icon: MapPin, title: 'Adresse', details: ['75008 Paris', '47 Boulevard de Courcelles'], subtext: 'Sur rendez-vous uniquement' },
     { icon: Clock, title: 'Horaires', details: [], subtext: (
