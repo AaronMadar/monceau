@@ -57,7 +57,7 @@ const MentionsLegalesPage: React.FC = () => {
                 1. Éditeur du site
               </h2>
               <div className="text-anthracite-600 font-sans leading-relaxed space-y-2">
-                <p><strong>Raison sociale :</strong> Monceau David & Co</p>
+                <p><strong>Raison sociale :</strong> Monceau David & Co (MDC consulting 491)</p>
                 <p><strong>Forme juridique :</strong> SASU, société par actions simplifiée unipersonnelle</p>
                 <p><strong>Adresse :</strong> 47 Bd de Courcelles, 75008 Paris, France</p>
                 <p><strong>Email :</strong> contact@monceaudavidconseil.com</p>

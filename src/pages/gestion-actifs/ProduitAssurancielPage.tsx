@@ -12,18 +12,9 @@ const ProduitAssurancielPage: React.FC = () => {
         { name: 'Contrats d\'assurance vie multisupports', description: 'Solutions d\'épargne diversifiées avec fonds euros et unités de compte' },
         { name: 'Assurance vie luxembourgeoise', description: 'Contrats internationaux pour optimisation fiscale et diversification' },
         { name: 'Contrats dédiés aux non-résidents', description: 'Solutions spécialisées pour la clientèle internationale' },
-        { name: 'Assurance vie temporaire', description: 'Protection décès temporaire pour garantir vos projets' }
       ]
     },
-    {
-      category: 'Contrats de Capitalisation',
-      items: [
-        { name: 'Capitalisation pour personnes morales', description: 'Placement de trésorerie d\'entreprise avec avantages fiscaux' },
-        { name: 'Capitalisation démembrée', description: 'Optimisation de la transmission via démembrement de propriété' },
-        { name: 'Contrats collectifs', description: 'Solutions mutualisées pour groupes et associations' },
-        { name: 'Capitalisation internationale', description: 'Diversification géographique et monétaire' }
-      ]
-    },
+    
     {
       category: 'Plan Épargne Retraite',
       items: [

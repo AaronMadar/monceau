@@ -22,9 +22,7 @@ const Header: React.FC = () => {
       label: 'Gestion d\'Actifs',
       subItems: [
         { href: '/gestion-actifs/produits-assurantiels', label: 'Produits Assurantiels' },
-        { href: '/gestion-actifs/placements-financiers', label: 'Placements Financiers' },
-        { href: '/gestion-actifs/solutions-societes', label: 'Solutions Sociétés' },
-        { href: '/gestion-actifs/produits-alternatifs', label: 'Produits Alternatifs' }
+    
       ]
     },
     { 
