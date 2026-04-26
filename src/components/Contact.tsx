@@ -95,7 +95,7 @@ const Contact: React.FC = () => {
             <div className="bg-gray-50 rounded-lg p-8 border border-gray-100">
               <h3 className="text-2xl font-serif font-semibold text-primary-900 mb-6">Demande de Contact</h3>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form id="contact-form" onSubmit={handleSubmit} className="space-y-6">
                 {/* Suppression des champs Netlify inutiles */}
                 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -182,7 +182,14 @@ const Contact: React.FC = () => {
                     <h4 className="text-lg font-serif font-semibold text-primary-900 mb-2">{info.title}</h4>
                     <div className="space-y-1">
                       {info.details.map((detail, idx) => (
-                        <p key={idx} className="text-anthracite-600 font-sans font-medium">{detail}</p>
+                        <p
+                          key={idx}
+                          className={`text-anthracite-600 font-sans font-medium ${
+                            info.title === 'Email' ? 'text-sm lg:text-xs break-all' : ''
+                          }`}
+                        >
+                          {detail}
+                        </p>
                       ))}
                       <p className="text-anthracite-500 font-sans text-sm whitespace-pre-line">{info.subtext}</p>
                     </div>

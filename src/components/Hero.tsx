@@ -34,7 +34,17 @@ const Hero: React.FC = () => {
               Découvrir nos services
             </button>
             <button 
-              onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => {
+                const form = document.querySelector('#contact-form');
+                if (form) {
+                  form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  // Optionally, focus the first input for accessibility
+                  const firstInput = form.querySelector('input, select, textarea');
+                  if (firstInput) (firstInput as HTMLElement).focus();
+                } else {
+                  document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
               className="w-full sm:w-auto border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-sm font-sans font-medium hover:bg-white hover:text-primary-900 transition-all duration-300"
             >
               Nous contacter

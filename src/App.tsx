@@ -17,9 +17,6 @@ import CookiePreferences from './components/CookiePreferences';
 import AssuranceProfessionnellePage from './pages/assurance/AssuranceProfessionnellePage';
 import AssurancePriveePage from './pages/assurance/AssurancePriveePage';
 import ProduitAssurancielPage from './pages/gestion-actifs/ProduitAssurancielPage';
-import PlacementFinancierPage from './pages/gestion-actifs/PlacementFinancierPage';
-import SolutionSocietePage from './pages/gestion-actifs/SolutionSocietePage';
-import ProduitAlternatifPage from './pages/gestion-actifs/ProduitAlternatifPage';
 import AuditEnergetiquePage from './pages/developpement-durable/AuditEnergetiquePage';
 import OptimisationCoutsPage from './pages/developpement-durable/OptimisationCoutsPage';
 import StrategieEnergetiquePage from './pages/developpement-durable/StrategieEnergetiquePage';
@@ -50,9 +47,6 @@ function App() {
               
               {/* Sous-pages Gestion d'Actifs */}
               <Route path="/gestion-actifs/produits-assurantiels" element={<ProduitAssurancielPage />} />
-              <Route path="/gestion-actifs/placements-financiers" element={<PlacementFinancierPage />} />
-              <Route path="/gestion-actifs/solutions-societes" element={<SolutionSocietePage />} />
-              <Route path="/gestion-actifs/produits-alternatifs" element={<ProduitAlternatifPage />} />
               
               {/* Sous-pages Développement Durable */}
               <Route path="/developpement-durable/audit-energetique" element={<AuditEnergetiquePage />} />
